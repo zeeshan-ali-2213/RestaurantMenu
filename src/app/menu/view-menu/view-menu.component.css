@@ -1,0 +1,30 @@
+.tag{
+    padding: 20px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+    margin-left: 800px;
+  }
+  span{
+    margin-left: 20px;
+}
+table {
+    width: 100%;
+    
+  }
+  mat-icon{
+      border: transparent;
+      background-color: transparent;
+  }
+  button{
+      background-color: transparent;
+      border: none;
+  }
+.content{
+    text-align: left;
+    padding-block: 10px;
+    padding-inline: 20px;
+}
+table{
+    border: 2px grey solid;
+}

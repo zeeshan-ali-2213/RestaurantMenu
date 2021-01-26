@@ -1,0 +1,19 @@
+<div class="mat-elevation-z8 tag">
+    <mat-icon color="basic">dashboard</mat-icon><span><b>Dashboard ></b></span> 
+    <span class="example-spacer"></span>
+    <button routerLink="menu/AddProducts" fab mat-icon-button class="add" aria-label="Example icon-button with heart icon">
+        <mat-icon color="accent">inventory_2</mat-icon><span><b> Add Product</b></span>
+    </button> 
+</div>
+<div>
+  <span *ngFor="let size of tableHeader">
+    <b>{{size}}</b>
+</span>
+</div>
+<div class="mat-elevation-z8 tag">
+  <app-menu-table
+      [dataSource]="tableData"
+      [columns]="tableColumn"
+    ></app-menu-table>
+    
+  </div>

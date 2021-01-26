@@ -1,0 +1,67 @@
+<div class="mat-elevation-z8 tag">
+    <mat-icon color="basic">dashboard</mat-icon><span><b>Dashboard ></b></span> 
+    <span class="example-spacer"></span>
+</div>
+<div class="mat-elevation-z8 tag">
+    <div class="container">
+        <h3>Products 
+        </h3>
+    <div class="row">
+        
+        <div class="col-md-6">
+            
+            <div class="content">
+                <h5>Title : 
+                    <span><b>{{data.title}}</b></span>
+                </h5>
+            </div>
+            <div class="content">
+
+            <h5>Category : 
+                <span><b>{{data.name}}</b></span>
+            </h5>
+            </div>
+            <div class="content">
+            <h5>SKU : 
+                <span><b>{{data.sku}}</b></span>
+            </h5>
+            </div><div class="content">
+            <h5>Price : 
+                <span><b>{{data.price}}</b></span>
+            </h5>
+        </div><div class="content">
+            <h5>SortOrder : 
+                <span><b>{{data.sortOrder}}</b></span>
+            </h5>
+        </div><div class="content">
+            <h5>ImageId : 
+                <span><b>{{data.imageId}}</b></span>
+            </h5>
+        </div><div class="content">
+            <h5>ProductType : 
+                <span><b>{{data.productType}}</b></span>
+            </h5>
+            </div>
+        </div>
+        <div class="col-md-6">
+        <div class="content">
+            <h5>Composites : 
+                <span><b>{{data.composites}}</b></span>
+            </h5>
+        </div><div class="content">
+            <h5>Size : 
+                <span *ngIf="data.sizes.length == 0">
+                    <b>No size is Available</b>
+                </span>
+                <div *ngIf="data.sizes.length > 0">
+                    <span *ngFor="let size of data.sizes">
+                        <b>{{size.name}}</b>
+                    </span>
+                </div>
+                
+            </h5>
+        </div>
+        </div>
+    </div>
+</div>
+</div>

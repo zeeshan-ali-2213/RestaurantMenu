@@ -1,0 +1,93 @@
+
+    <div class="mat-elevation-z8 main">
+    <div class="addUser"></div>
+    <div class="mat-elevation-z8 tag">
+        <h5><mat-icon color="basic">dashboard</mat-icon>ADD PRODUCTS</h5>
+
+    </div>
+    <form [formGroup]="createUser" (ngSubmit)="onSubmit()">
+                 <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="productID">Product ID</label>
+                            <input type="number" class="form-control" formControlName="productID" name="productID">
+                            <span *ngIf="productID!.invalid && productID!.touched">Email Field is Required!</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Category</mat-label>
+                                <mat-select [formControl]="categoryID" name="categoryID">
+                                  <mat-option *ngFor="let c of categoryData" [value]="c.name">{{c.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" formControlName="title" name="title">
+                            <span *ngIf="title!.invalid && title!.touched">Email Field is Required!</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="sku">SKU</label>
+                            <input type="text" class="form-control" formControlName="sku" name="sku">
+                            <span *ngIf="sku!.invalid && sku!.touched">Password Field is Required!</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="productType">Product Type</label>
+                            <input type="number" class="form-control" formControlName="productType" name="productType">
+                            <span *ngIf="productType!.invalid && productType!.touched">Password Field is Required!</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            
+                            <mat-form-field appearance="fill">
+                                <mat-label>Modifiers</mat-label>
+                                <mat-select [formControl]="modifiers" multiple name="modifiers">
+                                  <mat-option *ngFor="let topping of modifierData" [value]="topping.name">{{topping.name}}</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="number" class="form-control" formControlName="price" name="price">
+                            <span *ngIf="price!.invalid && price!.touched">Email Field is Required!</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Sizes</mat-label>
+                                <mat-select [formControl]="sizes" multiple name="sizes">
+                                  <mat-option *ngFor="let s of sizeRange" [value]="s">{{s}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <label for="sortOrder">Sort Order</label>
+                            <input type="number" class="form-control" formControlName="sortOrder" name="sortOrder">
+                            <span *ngIf="sortOrder!.invalid && sortOrder!.touched">Email Field is Required!</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageId">ImageID</label>
+                            <input type="number" class="form-control" formControlName="imageId" name="imageId">
+                            <span *ngIf="imageId!.invalid && imageId!.touched">Password Field is Required!</span>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="composites">Composites</label>
+                            <input type="number" class="form-control" formControlName="composites" name="composites">
+                            <span *ngIf="composites!.invalid && composites!.touched">Composites Field is Required!</span>
+                            <br>
+                        </div>
+                     </div>
+                 </div>
+                
+                <button type="submit">Submit</button>
+    </form>
+        
+ 
+</div>

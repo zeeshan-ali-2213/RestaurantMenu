@@ -1,0 +1,59 @@
+
+<div class="row">
+    <div class="col-md-6">
+        <p>Daily Sales Performance</p>
+        <div class="row">
+            <div class="col-md-4">TODAY <br><b>$0.88M</b></div>
+            <div class="col-md-4">YESTERDAY <br><b>$1.25M</b></div>
+            <div class="col-md-4">LAST WEEK <br><b>$9.18M</b></div>
+        </div>
+    <app-custom-graph 
+        [ChartData]="dailyPerformanceChartData"
+        [ChartLabels]="dailyPerformanceChartLabels"
+        [ChartOptions]="dailyPerformanceChartOptions"
+        [ChartColors]="dailyPerformanceChartColors"
+        [ChartLegend]="dailyPerformanceChartLegend"
+        [ChartType]="dailyPerformanceChartType"
+        [ChartPlugins]="dailyPerformanceChartPlugins"
+    ></app-custom-graph>
+    </div>
+    <div class="col-md-6">
+        <p>Monthly Sales Performance</p>
+        <div class="row">
+            <div class="col-md-4">THIS MONTH <br><b>$27M</b></div>
+            <div class="col-md-4">LAST MONTH <br><b>$36M</b></div>
+            <div class="col-md-4">YTD <br><b>$389M</b></div>
+        </div>
+        <app-custom-graph 
+        [ChartData]="monthlyPerformanceChartData"
+        [ChartLabels]="monthlyPerformanceChartLabels"
+        [ChartOptions]="monthlyPerformanceChartOptions"
+        [ChartColors]="monthlyPerformanceChartColors"
+        [ChartLegend]="monthlyPerformanceChartLegend"
+        [ChartType]="monthlyPerformanceChartType"
+        [ChartPlugins]="monthlyPerformanceChartPlugins"
+    ></app-custom-graph>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <p>Annual Sales Performance</p>
+        <app-custom-graph 
+        [ChartData]="annualSalesChartData"
+        [ChartOptions]="annualSalesChartOptions"
+        [ChartLabels]="annualSalesChartLabels"
+        [ChartType]="annualSalesChartType"
+    ></app-custom-graph>
+    </div>
+    <div class="col-md-6">
+        <p>Sales by Sector</p>
+        <app-custom-graph 
+        [ChartData]="SalesBySectorChartData"
+        [ChartOptions]="SalesBySectorChartOptions"
+        [ChartLabels]="SalesBySectorChartLabels"
+        [ChartType]="SalesBySectorChartType"
+        [ChartColors]="SalesBySectorChartColors"
+
+    ></app-custom-graph>
+    </div>
+</div>
